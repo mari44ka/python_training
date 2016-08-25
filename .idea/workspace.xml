@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5bcd556d-1ecd-49d2-ae3a-4f07d58e4f5d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/python_training.iml" afterPath="$PROJECT_DIR$/.idea/python_training.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="python_training.iws" />
@@ -360,18 +359,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_python_training - 2016.08.24 at 23h 52m 40s.xml">
-      <configuration name="Unittests in python_training" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_python_training - 2016.08.24 at 23h 57m 50s.xml">
-      <configuration name="Unittests in python_training" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_python_training - 2016.08.25 at 00h 00m 28s.xml">
-      <configuration name="Unittests in python_training" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_python_training - 2016.08.25 at 00h 02m 56s.xml">
-      <configuration name="Unittests in python_training" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_python_training - 2016.08.25 at 00h 03m 12s.xml">
       <configuration name="Unittests in python_training" configurationId="tests" />
     </history-entry>
@@ -388,6 +375,18 @@
       <configuration name="py.test in add_group.py" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_in_add_group_py - 2016.08.25 at 00h 17m 50s.xml">
+      <configuration name="py.test in add_group.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_add_group_py - 2016.08.25 at 00h 24m 59s.xml">
+      <configuration name="py.test in add_group.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_add_group_py - 2016.08.25 at 00h 25m 11s.xml">
+      <configuration name="py.test in add_group.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_add_group_py - 2016.08.25 at 00h 25m 43s.xml">
+      <configuration name="py.test in add_group.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_add_group_py - 2016.08.25 at 00h 30m 21s.xml">
       <configuration name="py.test in add_group.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -430,6 +429,16 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/add_group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/add_group.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
