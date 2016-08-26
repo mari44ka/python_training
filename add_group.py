@@ -28,6 +28,16 @@ class add_group(unittest.TestCase):
 
         self.logout(wd)
 
+    def test_add_group_empty(self):
+        wd = self.wd
+        self.open_homepage(wd)
+        self.login(wd, name="admin", password="secret")
+
+            # creating group
+        self.group_creating(wd, name="", footer="", header="")
+
+        self.logout(wd)
+
     def logout(self, wd):
         wd.find_element_by_link_text("Logout").click()
 
@@ -44,6 +54,8 @@ class add_group(unittest.TestCase):
         wd.find_element_by_name("group_header").clear()
         wd.find_element_by_name("group_header").send_keys(header)
         wd.find_element_by_name("submit").click()
+
+
 
     def login(self, wd, name, password):
         # login
