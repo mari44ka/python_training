@@ -21,36 +21,38 @@ class add_group(unittest.TestCase):
 
         wd = self.wd
         self.open_homepage(wd)
-        self.login(wd)
+        self.login(wd, name="admin", password="secret")
+
         #creating group
-        self.group_creating(wd)
+        self.group_creating(wd, name="my", footer="my", header="my")
+
         self.logout(wd)
 
     def logout(self, wd):
         wd.find_element_by_link_text("Logout").click()
 
-    def group_creating(self, wd):
+    def group_creating(self, wd, name, footer, header):
         wd.find_element_by_link_text("groups").click()
         wd.find_element_by_name("new").click()
         wd.find_element_by_name("group_name").click()
         wd.find_element_by_name("group_name").clear()
-        wd.find_element_by_name("group_name").send_keys("my")
+        wd.find_element_by_name("group_name").send_keys(name)
         wd.find_element_by_name("group_footer").click()
         wd.find_element_by_name("group_footer").clear()
-        wd.find_element_by_name("group_footer").send_keys("my")
+        wd.find_element_by_name("group_footer").send_keys(footer)
         wd.find_element_by_name("group_header").click()
         wd.find_element_by_name("group_header").clear()
-        wd.find_element_by_name("group_header").send_keys("my")
+        wd.find_element_by_name("group_header").send_keys(header)
         wd.find_element_by_name("submit").click()
 
-    def login(self, wd):
+    def login(self, wd, name, password):
         # login
         wd.find_element_by_name("user").click()
         wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys("admin")
+        wd.find_element_by_name("user").send_keys(name)
         wd.find_element_by_name("pass").click()
         wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys("secret")
+        wd.find_element_by_name("pass").send_keys(password)
         wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
         wd.find_element_by_css_selector("html").click()
         wd.find_element_by_css_selector("html").click()
