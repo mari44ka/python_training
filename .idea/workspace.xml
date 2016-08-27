@@ -25,8 +25,8 @@
       <file leaf-file-name="add_group.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add_group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+            <state relative-caret-position="240">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
               <folding>
                 <element signature="e#24#82#0" expanded="true" />
               </folding>
@@ -37,11 +37,21 @@
       <file leaf-file-name="add_new_contact.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/add_new_contact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+            <state relative-caret-position="561">
+              <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
               <folding>
                 <element signature="e#24#82#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/contact1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -58,6 +68,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -66,6 +83,8 @@
       <list>
         <option value="$PROJECT_DIR$/group.py" />
         <option value="$PROJECT_DIR$/add_group.py" />
+        <option value="$PROJECT_DIR$/.cache/contact.py" />
+        <option value="$PROJECT_DIR$/contact1.py" />
         <option value="$PROJECT_DIR$/add_new_contact.py" />
       </list>
     </option>
@@ -198,6 +217,23 @@
       <option name="params" value="" />
       <option name="USE_PARAM" value="false" />
       <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="contact" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.cache" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="python_training" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.cache/contact.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -334,18 +370,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in add_group" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in python_training" />
       <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in add_group.py" />
       <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in add_new_contact.py" />
+      <item index="4" class="java.lang.String" itemvalue="Python.contact" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in add_new_contact.py" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in add_group.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in python_training" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in add_group" />
+        <item index="1" class="java.lang.String" itemvalue="Python.contact" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in add_group.py" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in python_training" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in add_group" />
       </list>
     </recent_temporary>
   </component>
@@ -366,21 +404,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_add_group_py - 2016.08.25 at 22h 52m 09s.xml">
-      <configuration name="py.test in add_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_add_group_py - 2016.08.25 at 23h 03m 21s.xml">
-      <configuration name="py.test in add_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_add_group_py - 2016.08.25 at 23h 10m 35s.xml">
-      <configuration name="py.test in add_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_add_group_py - 2016.08.25 at 23h 15m 16s.xml">
-      <configuration name="py.test in add_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_add_group_py - 2016.08.25 at 23h 16m 55s.xml">
-      <configuration name="py.test in add_group.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="py_test_in_add_group_py - 2016.08.25 at 23h 18m 54s.xml">
       <configuration name="py.test in add_group.py" configurationId="tests" />
     </history-entry>
@@ -396,9 +419,24 @@
     <history-entry file="py_test_in_add_new_contact_py - 2016.08.26 at 22h 55m 52s.xml">
       <configuration name="py.test in add_new_contact.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="py_test_in_add_new_contact_py - 2016.08.26 at 23h 22m 27s.xml">
+      <configuration name="py.test in add_new_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_add_new_contact_py - 2016.08.26 at 23h 23m 05s.xml">
+      <configuration name="py.test in add_new_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_add_new_contact_py - 2016.08.26 at 23h 28m 59s.xml">
+      <configuration name="py.test in add_new_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_add_new_contact_py - 2016.08.26 at 23h 31m 07s.xml">
+      <configuration name="py.test in add_new_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_add_new_contact_py - 2016.08.26 at 23h 43m 20s.xml">
+      <configuration name="py.test in add_new_contact.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="182" y="23" width="1098" height="724" extended-state="1" />
+    <frame x="182" y="23" width="1098" height="724" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -555,18 +593,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/add_group.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        <state relative-caret-position="240">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
           <folding>
             <element signature="e#24#82#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.cache/contact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/add_new_contact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+        <state relative-caret-position="561">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
           <folding>
             <element signature="e#24#82#0" expanded="true" />
           </folding>
