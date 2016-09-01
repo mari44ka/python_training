@@ -2,6 +2,7 @@
 from selenium.webdriver.firefox.webdriver import WebDriver
 from group import Group
 import  unittest
+from Application import Application
 
 
 def is_alert_present(wd):
@@ -14,66 +15,28 @@ def is_alert_present(wd):
 
 class add_group(unittest.TestCase):
     def setUp(self):
-        self.wd = WebDriver()
-        self.wd.implicitly_wait(60)
+        self.app=Application()
 
     def test_add_group(self):
-
-        wd = self.wd
-        self.open_homepage(wd)
-        self.login(wd, name="admin", password="secret")
-
+        self.app.open_homepage()
+        self.app.login(name="admin", password="secret")
         #creating group
-        self.group_creating(wd, Group(name="my", footer="my", header="my"))
-
-        self.logout(wd)
+        self.app.group_creating(Group(name="my", footer="my", header="my"))
+        self.app.logout()
 
     def test_add_group_empty(self):
-        wd = self.wd
-        self.open_homepage(wd)
-        self.login(wd, name="admin", password="secret")
+
+        self.app.open_homepage()
+        self.app.login(name="admin", password="secret")
 
             # creating group
-        self.group_creating(wd, Group(name="", footer="", header=""))
+        self.app.group_creating(Group(name="", footer="", header=""))
 
-        self.logout(wd)
+        self.app.logout()
 
-    def logout(self, wd):
-        wd.find_element_by_link_text("Logout").click()
-
-    def group_creating(self, wd, group):
-        wd.find_element_by_link_text("groups").click()
-        wd.find_element_by_name("new").click()
-        wd.find_element_by_name("group_name").click()
-        wd.find_element_by_name("group_name").clear()
-        wd.find_element_by_name("group_name").send_keys(group.name)
-        wd.find_element_by_name("group_footer").click()
-        wd.find_element_by_name("group_footer").clear()
-        wd.find_element_by_name("group_footer").send_keys(group.footer)
-        wd.find_element_by_name("group_header").click()
-        wd.find_element_by_name("group_header").clear()
-        wd.find_element_by_name("group_header").send_keys(group.header)
-        wd.find_element_by_name("submit").click()
-
-
-
-    def login(self, wd, name, password):
-        # login
-        wd.find_element_by_name("user").click()
-        wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys(name)
-        wd.find_element_by_name("pass").click()
-        wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys(password)
-        wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
-        wd.find_element_by_css_selector("html").click()
-        wd.find_element_by_css_selector("html").click()
-
-    def open_homepage(self, wd):
-        wd.get("http://localhost/addressbook/index.php")
 
     def tearDown(self):
-        self.wd.quit()
+        self.app.destroy()
 
 
 if __name__ == '__main__':
