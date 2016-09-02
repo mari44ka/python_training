@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bcd556d-1ecd-49d2-ae3a-4f07d58e4f5d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_new_contact.py" afterPath="$PROJECT_DIR$/add_new_contact.py" />
     </list>
     <ignored path="python_training.iws" />
@@ -45,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_new_contact.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="add_new_contact.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/add_new_contact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="114" column="22" selection-start-line="114" selection-start-column="8" selection-end-line="114" selection-end-column="22" />
+            <state relative-caret-position="360">
+              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
               <folding>
                 <element signature="e#24#82#0" expanded="true" />
               </folding>
@@ -57,7 +56,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Contactapp.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Contactapp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Contactapp.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1395">
@@ -107,8 +106,8 @@
         <option value="$PROJECT_DIR$/contact1.py" />
         <option value="$PROJECT_DIR$/Application.py" />
         <option value="$PROJECT_DIR$/add_group.py" />
-        <option value="$PROJECT_DIR$/add_new_contact.py" />
         <option value="$PROJECT_DIR$/Contactapp.py" />
+        <option value="$PROJECT_DIR$/add_new_contact.py" />
       </list>
     </option>
   </component>
@@ -432,9 +431,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_add_group_py - 2016.08.31 at 23h 49m 49s.xml">
-      <configuration name="py.test in add_group.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="py_test_in_add_group_py - 2016.08.31 at 23h 54m 35s.xml">
       <configuration name="py.test in add_group.py" configurationId="tests" />
     </history-entry>
@@ -460,6 +456,9 @@
       <configuration name="py.test in add_new_contact.py" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_in_add_new_contact_py - 2016.09.01 at 14h 59m 02s.xml">
+      <configuration name="py.test in add_new_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_add_new_contact_py - 2016.09.02 at 00h 08m 51s.xml">
       <configuration name="py.test in add_new_contact.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -750,14 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/add_group.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -768,13 +759,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add_new_contact.py">
+    <entry file="file://$PROJECT_DIR$/Application.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="114" column="22" selection-start-line="114" selection-start-column="8" selection-end-line="114" selection-end-column="22" />
-          <folding>
-            <element signature="e#24#82#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="750">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -783,6 +772,16 @@
         <state relative-caret-position="1395">
           <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_new_contact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding>
+            <element signature="e#24#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
