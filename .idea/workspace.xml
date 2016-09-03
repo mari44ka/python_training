@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5bcd556d-1ecd-49d2-ae3a-4f07d58e4f5d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_new_contact.py" afterPath="$PROJECT_DIR$/add_new_contact.py" />
-    </list>
+    <list default="true" id="5bcd556d-1ecd-49d2-ae3a-4f07d58e4f5d" name="Default" comment="" />
     <ignored path="python_training.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -432,9 +429,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_add_new_contact_py - 2016.09.02 at 22h 35m 46s.xml">
-      <configuration name="py.test in add_new_contact.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="py_test_in_add_new_contact_py - 2016.09.02 at 22h 36m 44s.xml">
       <configuration name="py.test in add_new_contact.py" configurationId="tests" />
     </history-entry>
@@ -460,6 +454,9 @@
       <configuration name="py.test in add_new_contact.py" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_in_add_new_contact_py - 2016.09.02 at 22h 53m 05s.xml">
+      <configuration name="py.test in add_new_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_add_new_contact_py - 2016.09.02 at 22h 54m 23s.xml">
       <configuration name="py.test in add_new_contact.py" configurationId="tests" />
     </history-entry>
   </component>
