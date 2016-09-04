@@ -2,8 +2,9 @@
 
 
 import pytest
-from contact1 import Contact1
-from Contactapp import Contact
+
+from fixture.Contactapp import Contact
+from model.contact1 import Contact1
 
 
 @pytest.fixture
