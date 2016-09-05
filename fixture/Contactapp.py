@@ -1,13 +1,12 @@
 from selenium.webdriver.firefox.webdriver import WebDriver
-
+from fixture.sessio import Sessionhelper
 class Contact:
     def __init__(self):
         self.wd = WebDriver()
         self.wd.implicitly_wait(60)
+        self.sessio = Sessionhelper(self)
 
-    def logout(self):
-        wd = self.wd
-        wd.find_element_by_link_text("Logout").click()
+
 
     def addnew_contact(self, contact1):
         wd = self.wd
@@ -77,15 +76,6 @@ class Contact:
         wd.find_element_by_id("content").click()
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
 
-    def login(self, name="admin", password="secret"):
-        wd = self.wd
-        wd.find_element_by_name("user").click()
-        wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys(name)
-        wd.find_element_by_name("pass").click()
-        wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys(password)
-        wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
 
     def open_homepage(self):
         wd = self.wd
