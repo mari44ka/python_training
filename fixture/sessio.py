@@ -16,8 +16,8 @@ class Sessionhelper:
         wd.find_element_by_name("pass").clear()
         wd.find_element_by_name("pass").send_keys(password)
         wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
-        wd.find_element_by_css_selector("html").click()
-        wd.find_element_by_css_selector("html").click()
+        #wd.find_element_by_css_selector("html").click()
+        #wd.find_element_by_css_selector("html").click()
 
     def logout(self):
         wd = self.app.wd
