@@ -1,10 +1,10 @@
 
 class Contacthelper:
-    def __init__(self,kpp):
-        self.kpp=kpp
+    def __init__(self,app):
+        self.app=app
 
     def addnew(self, contact1):
-        wd = self.kpp.wd
+        wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()

@@ -18,3 +18,5 @@ class Grouphelper:
         wd.find_element_by_name("group_header").clear()
         wd.find_element_by_name("group_header").send_keys(group.header)
         wd.find_element_by_name("submit").click()
+
+
