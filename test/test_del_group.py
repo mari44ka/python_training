@@ -1,4 +1,5 @@
 
+from model.group import Group
 
 def test_del_first_group(app):
     app.open_homepage()
