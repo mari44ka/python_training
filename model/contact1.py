@@ -19,3 +19,9 @@ class Contact1:
         self.birth_year=birth_year
         self.address_2=address_2
         self.notes=notes
+
+class Contact11:
+    def __init__(self,lname,hphone,e_mail2):
+        self.lname=lname
+        self.hphone=hphone
+        self.e_mail2=e_mail2
