@@ -74,9 +74,24 @@ class Contacthelper:
 
     def del_first_contact(self):
         wd = self.app.wd
-        self.app.open_homepage()
+
         #delet first contact
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_css_selector("input[type=button][value=Delete]").click()
         wd.switch_to_alert().accept()
 
+    def edit_first_contact(self,contact11):
+        wd=self.app.wd
+
+        wd.find_element_by_name("selected[]").click()
+        wd.find_element_by_css_selector("img[alt=Edit]").click()
+        wd.find_element_by_name("lastname").click()
+        wd.find_element_by_name("lastname").clear()
+        wd.find_element_by_name("lastname").send_keys(contact11.lname)
+        wd.find_element_by_name("home").click()
+        wd.find_element_by_name("home").clear()
+        wd.find_element_by_name("home").send_keys(contact11.hphone)
+        wd.find_element_by_name("email2").click()
+        wd.find_element_by_name("email2").clear()
+        wd.find_element_by_name("email2").send_keys(contact11.e_mail2)
+        wd.find_element_by_name("update").click()
