@@ -2,12 +2,23 @@
 import pytest
 from fixture.Application import Application
 
+fixture=None
 
-
-@pytest.fixture(scope="session")
+@pytest.fixture()
 def app(request):
-    fixture=Application()
-    fixture.sessio.login(name="admin", password="secret")
+    global fixture
+    if fixture is None:
+        fixture=Application()
+        fixture.sessio.login(name="admin", password="secret")
+    else:
+        if not fixture.is_valid():
+            fixture = Application()
+            fixture.sessio.login(name="admin", password="secret")
+    return fixture
+
+@pytest.fixture(scope="session",autouse=True)  #fixture will play automaticly after using autouse
+def stop(request):
+
     def fin():
         fixture.sessio.logout()
         fixture.destroy()
