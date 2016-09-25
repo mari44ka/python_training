@@ -1,7 +1,7 @@
 class Contact1:
     def __init__(self,fname=None, mname=None, lname=None, nname=None, title=None, compname=None, address=None,
      hphone=None, mphone=None, wphone=None, faxnumber=None, e_mail=None, e_mail2=None, e_mail3=None,
-                 home_page=None, birth_year=None, address_2=None, notes=None):
+                 home_page=None, birth_year=None, address_2=None, notes=None,id=None):
         self.fname=fname
         self.mname=mname
         self.lname=lname
@@ -20,4 +20,5 @@ class Contact1:
         self.birth_year=birth_year
         self.address_2=address_2
         self.notes=notes
+        self.id=id
 
