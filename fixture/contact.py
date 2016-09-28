@@ -48,7 +48,6 @@ class Contacthelper:
 
     def del_first_contact(self):
         wd = self.app.wd
-
         #delet first contact
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_css_selector("input[type=button][value=Delete]").click()
@@ -66,7 +65,9 @@ class Contacthelper:
 
     def count(self):
         wd=self.app.wd
+        self.app.open_homepage()
         return len(wd.find_elements_by_name("selected[]"))
+
 
     contact_cache=None
 
