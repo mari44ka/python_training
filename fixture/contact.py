@@ -58,9 +58,12 @@ class Contacthelper:
         wd.switch_to_alert().accept()
         self.contact_cache=None
 
-    def edit_first_contact(self,Contact1):
+    def edit_first_contact(self):
+        self.edit_contact_by_index(0)
+
+    def edit_contact_by_index(self,index,Contact1):
         wd=self.app.wd
-        wd.find_element_by_name("selected[]").click()
+        wd.find_elements_by_name("selected[]")[index].click()
         wd.find_element_by_css_selector("img[alt=Edit]").click()
         self.fill_contact_form(Contact1)
         wd.find_element_by_name("update").click()
