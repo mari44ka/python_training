@@ -47,9 +47,13 @@ class Contacthelper:
             wd.find_element_by_name(field_name).send_keys(text)
 
     def del_first_contact(self):
+        self.del_contact_by_index(0)
+
+
+    def del_contact_by_index(self,index):
         wd = self.app.wd
         #delet first contact
-        wd.find_element_by_name("selected[]").click()
+        wd.find_elements_by_name("selected[]")[index].click()
         wd.find_element_by_css_selector("input[type=button][value=Delete]").click()
         wd.switch_to_alert().accept()
         self.contact_cache=None
