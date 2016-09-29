@@ -28,14 +28,16 @@ class Grouphelper:
             wd.find_element_by_name(field_name).clear()
             wd.find_element_by_name(field_name).send_keys(text)
 
-
-
     def del_first_group(self):
+        self.del_group_by_index(0)
+
+
+    def del_group_by_index(self,index):
         wd=self.app.wd
         self.app.open_homepage()
         self.open_groups_page()
         # select first group
-        self.select_first_group()
+        self.select_group_by_index(index)
         #delete first group
         wd.find_element_by_name("delete").click()
         self.group_cache = None
@@ -45,9 +47,9 @@ class Grouphelper:
         if not (wd.current_url.endswith("/group.php") and len(wd.find_elements_by_name("new"))>0):
             wd.find_element_by_link_text("groups").click()
 
-    def select_first_group(self):
+    def select_group_by_index(self,index):
         wd=self.app.wd
-        wd.find_element_by_name("selected[]").click()
+        wd.find_elements_by_name("selected[]")[index].click()
 
     def edit_first_group(self,new_group_data):
         wd = self.app.wd
