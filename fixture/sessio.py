@@ -38,8 +38,9 @@ class Sessionhelper:
         wd=self.app.wd
         return self.get_logged_name()==name
 
-    def 
-        return wd.find_element_by_xpath("//div/div[1]/form/b").text=="(%s)" % name
+    def get_logged_name(self):
+        wd=self.app.wd
+        return wd.find_element_by_xpath("//div/div[1]/form/b").text[1:-1]
 
     def ensure_login(self,name, password):
         wd=self.app.wd
