@@ -63,8 +63,9 @@ class Contacthelper:
 
     def edit_contact_by_index(self,index,Contact1):
         wd=self.app.wd
-        wd.find_elements_by_name("selected[]")[index].click()
-        wd.find_element_by_css_selector("img[alt=Edit]").click()
+        row=wd.find_elements_by_name("entry")[index]
+        cell=row.find_elements_by_tag_name("td")[7]
+        cell.find_element_by_css_selector('img[alt="Edit"]').click()
         self.fill_contact_form(Contact1)
         wd.find_element_by_name("update").click()
         self.contact_cache=None
