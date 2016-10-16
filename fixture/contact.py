@@ -94,8 +94,10 @@ class Contacthelper:
                 fname = cells[2].text
                 lname = cells[1].text
                 all_phones=cells[5].text.splitlines()
-                self.contact_cache.append(Contact1(id=id, fname=fname, lname=lname, hphone=all_phones[0],
-                                                   mphone=all_phones[1],wphone=all_phones[2],secondphone=all_phones[3]))
+                address=cells[3].text
+                all_emails=cells[4].text.splitlines()
+                self.contact_cache.append(Contact1(id=id, fname=fname, lname=lname, hphone=all_phones[0],e_mail3=all_emails[2],
+                    mphone=all_phones[1],wphone=all_phones[2],secondphone=all_phones[3],address=address,e_mail=all_emails[0],e_mail2=all_emails[1]))
 
         return list(self.contact_cache)
 
@@ -123,10 +125,14 @@ class Contacthelper:
         mphone = wd.find_element_by_name("mobile").get_attribute("value")
         wphone = wd.find_element_by_name("work").get_attribute("value")
         secondphone = wd.find_element_by_name("phone2").get_attribute("value")
-        return Contact1(fname=fname,lname=lname,id=id,hphone=hphone,mphone=mphone,wphone=wphone,secondphone=secondphone)
+        address=wd.find_element_by_name("address").get_attribute("value")
+        e_mail=wd.find_element_by_name("email").get_attribute("value")
+        e_mail2=wd.find_element_by_name("email2").get_attribute("value")
+        e_mail3=wd.find_element_by_name("email3").get_attribute("value")
+        return Contact1(fname=fname,lname=lname,id=id,hphone=hphone,mphone=mphone,wphone=wphone,
+                        secondphone=secondphone,address=address,e_mail=e_mail,e_mail2=e_mail2,e_mail3=e_mail3)
 
     def get_contact_from_view_page(self,index):
-
         wd=self.app.wd
         self.open_contact_view_by_index(index)
         text=wd.find_element_by_id("content").text
