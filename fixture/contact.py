@@ -93,11 +93,10 @@ class Contacthelper:
                 id = cells[0].find_element_by_name("selected[]").get_attribute("value")
                 fname = cells[2].text
                 lname = cells[1].text
-                all_phones=cells[5].text.splitlines()
                 address=cells[3].text
-                all_emails=cells[4].text.splitlines()
-                self.contact_cache.append(Contact1(id=id, fname=fname, lname=lname, hphone=all_phones[0],e_mail3=all_emails[2],
-                    mphone=all_phones[1],wphone=all_phones[2],secondphone=all_phones[3],address=address,e_mail=all_emails[0],e_mail2=all_emails[1]))
+                all_emails=cells[4].text
+                all_phones=cells[5].text
+                self.contact_cache.append(Contact1(id=id, fname=fname, lname=lname,address=address,all_emails_from_homepage=all_emails,all_phones_from_home_page=all_phones))
 
         return list(self.contact_cache)
 
@@ -142,3 +141,19 @@ class Contacthelper:
         secondphone = re.search("P: (.*)", text).group(1)
         return Contact1(hphone=hphone, mphone=mphone, wphone=wphone,
                     secondphone=secondphone)
+
+
+    def merge_phones_like_on_home_page(self,contact):
+        return "\n".join(filter(lambda x: x !=" ",
+                                map(lambda x: clear(x),
+                                    filter(lambda x: x is not None,
+                                           [contact.hphone,contact.mphone,contact.wphone,contact.secondphone]))))
+
+    def merge_emails_like_on_home_page(self,contact):
+        return "\n".join(filter(lambda x: x!=" ",
+                                (filter(lambda x: x is not None,
+                                           [contact.e_mail,contact.e_mail2,contact.e_mail3]))))
+
+def clear(s):
+    return re.sub("[() -]", "", s)
+
