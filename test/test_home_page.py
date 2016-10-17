@@ -1,5 +1,5 @@
 
-import re
+
 
 def test_home_page(app):
     contact_from_homepage = app.contact.get_contact_list()[0]
@@ -13,5 +13,4 @@ def test_home_page(app):
 
 
 
-def clear(s):
-    return re.sub("[() -]", "", s)
+
