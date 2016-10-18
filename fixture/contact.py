@@ -136,24 +136,29 @@ class Contacthelper:
         self.open_contact_view_by_index(index)
         text=wd.find_element_by_id("content").text
         hphone=re.search("H: (.*)",text).group(1)
-        mphone = re.search("M: (.*)", text).group(1)
-        wphone = re.search("W: (.*)", text).group(1)
-        secondphone = re.search("P: (.*)", text).group(1)
+        mphone = re.search("M: (.*)",text).group(1)
+        wphone = re.search("W: (.*)",text).group(1)
+        secondphone = re.search("P: (.*)",text).group(1)
         return Contact1(hphone=hphone, mphone=mphone, wphone=wphone,
                     secondphone=secondphone)
 
 
     def merge_phones_like_on_home_page(self,contact):
-        return "\n".join(filter(lambda x: x !=" ",
+
+        return "\n".join(filter(lambda x: x != " ",
                                 map(lambda x: clear(x),
                                     filter(lambda x: x is not None,
-                                           [contact.hphone,contact.mphone,contact.wphone,contact.secondphone]))))
+                                           [contact.hphone, contact.mphone, contact.wphone,
+                                            contact.secondphone]))))
+
 
     def merge_emails_like_on_home_page(self,contact):
         return "\n".join(filter(lambda x: x!=" ",
-                                (filter(lambda x: x is not None,
+                                map(lambda x: x,
+                                filter(lambda x: x is not None,
                                            [contact.e_mail,contact.e_mail2,contact.e_mail3]))))
 
 def clear(s):
-    return re.sub("[() -]", "", s)
+
+    return re.sub("[()-]", " ", s)
 

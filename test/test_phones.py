@@ -17,7 +17,7 @@ def test_phones_on_contact_view_page(app):
 
 
 def clear(s):
-    return re.sub("[() -]","",s)
+    return re.sub("[() -]"," ",s)
 
 
 
