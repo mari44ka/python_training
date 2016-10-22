@@ -145,7 +145,7 @@ class Contacthelper:
 
     def merge_phones_like_on_home_page(self,contact):
 
-        return "\n".join(filter(lambda x: x != " ",
+        return "\n".join(filter(lambda x: x!= " ",
                                 map(lambda x: clear(x),
                                     filter(lambda x: x is not None,
                                            [contact.hphone, contact.mphone, contact.wphone,
