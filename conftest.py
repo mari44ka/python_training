@@ -1,7 +1,7 @@
 
 import pytest
 from fixture.Application import Application
-from fixture.db import DbFixture
+from fixture.db import Dbfixture
 import json
 import jsonpickle
 import os.path
@@ -21,20 +21,18 @@ def load_config(file):
 @pytest.fixture()
 def app(request):
     global fixture
-    web_config=load_config(request.config.getoption("--target"))["web"]
     browser = request.config.getoption("--browser")
-
-
+    web_config = load_config(request.config.getoption("--target"))["web"]
     if fixture is None or not fixture.is_valid():
 
         fixture=Application(browser=browser,base_url=web_config["base_url"])
-    fixture.sessio.ensure_login(name=web_config["username"], password=web_config["password"])
+    fixture.session.ensure_login(username=web_config["username"],password=web_config["password"])
     return fixture
 
 @pytest.fixture(scope="session")
 def db(request):
     db_config = load_config(request.config.getoption("--target"))["db"]
-    dbfixture=DbFixture(host=db_config["host"], name=db_config["name"], user=db_config["user"], password=db_config["password"])
+    dbfixture=Dbfixture(host=db_config["host"], name=db_config["name"], user=db_config["user"], password=db_config["password"])
     def fin():
         dbfixture.destroy()
     request.addfinalizer(fin)
@@ -42,12 +40,13 @@ def db(request):
 
 @pytest.fixture(scope="session",autouse=True)  #fixture will play automaticly after using autouse
 def stop(request):
-
     def fin():
-        fixture.sessio.ensure_logout()
+        fixture.session.ensure_logout()
         fixture.destroy()
     request.addfinalizer(fin)
     return fixture
+
+
 
 def pytest_addoption(parser):
     parser.addoption("--browser",action="store",default="firefox")

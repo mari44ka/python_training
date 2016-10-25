@@ -5,13 +5,13 @@ class Sessionhelper:
         self.app=app
 
 
-    def login(self,name, password):
+    def login(self,username, password):
 
         wd=self.app.wd
         self.app.open_homepage()
         wd.find_element_by_name("user").click()
         wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys(name)
+        wd.find_element_by_name("user").send_keys(username)
         wd.find_element_by_name("pass").click()
         wd.find_element_by_name("pass").clear()
         wd.find_element_by_name("pass").send_keys(password)
@@ -34,19 +34,19 @@ class Sessionhelper:
 
 
 
-    def is_logged_in_as(self,name):
+    def is_logged_in_as(self,username):
         wd=self.app.wd
-        return self.get_logged_name()==name
+        return self.get_logged_name()==username
 
     def get_logged_name(self):
         wd=self.app.wd
         return wd.find_element_by_xpath("//div/div[1]/form/b").text[1:-1]
 
-    def ensure_login(self,name, password):
+    def ensure_login(self,username, password):
         wd=self.app.wd
         if self.is_logged_in():
-            if self.is_logged_in_as(name):
+            if self.is_logged_in_as(username):
                 return
             else:
                 self.logout()
-        self.login(name, password)
+        self.login(username, password)

@@ -1,6 +1,6 @@
 
 from selenium import webdriver
-from fixture.sessio import Sessionhelper
+from fixture.session import Sessionhelper
 from fixture.group import Grouphelper
 from fixture.contact import Contacthelper
 
@@ -16,7 +16,7 @@ class Application:
             raise ValueError("Unrecognized browser %s" % browser)
 
         #self.wd.implicitly_wait(5) only for dynamic applications
-        self.sessio=Sessionhelper(self)
+        self.session=Sessionhelper(self)
         self.group=Grouphelper(self)
         self.contact=Contacthelper(self)
         self.base_url=base_url
