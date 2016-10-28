@@ -10,6 +10,7 @@ class Contacthelper:
         wd.find_element_by_link_text("add new").click()
         self.fill_contact_form(contact1)
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
+        self.app.open_homepage()
         self.contact_cache =None
 
     def fill_contact_form(self, contact1):
@@ -61,6 +62,15 @@ class Contacthelper:
         wd.switch_to_alert().accept()
         self.contact_cache=None
 
+
+    def del_contact_by_id(self,id):
+        wd = self.app.wd
+        #delet first contact
+        wd.find_element_by_xpath(".//*[@id='%s']" % id).click()
+        wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
+        wd.switch_to_alert().accept()
+        self.contact_cache=None
+
     def edit_first_contact(self):
         self.edit_contact_by_index(0)
 
@@ -70,6 +80,13 @@ class Contacthelper:
         cell=row.find_elements_by_tag_name("td")[7]
         cell.find_element_by_css_selector('img[alt="Edit"]').click()
         self.fill_contact_form(Contact1)
+        wd.find_element_by_name("update").click()
+        self.contact_cache=None
+
+    def edit_contact_by_id(self,id,new_contact_data):
+        wd=self.app.wd
+        wd.find_element_by_xpath('//a[@href="edit.php?id=%s"]' % id).click()
+        self.fill_contact_form(new_contact_data)
         wd.find_element_by_name("update").click()
         self.contact_cache=None
 
