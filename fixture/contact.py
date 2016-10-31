@@ -160,14 +160,6 @@ class Contacthelper:
                     secondphone=secondphone)
 
 
-    def merge_phones_like_on_home_page(self,contact):
-
-        return "\n".join(filter(lambda x: x!= " ",
-                                map(lambda x: clear(x),
-                                    filter(lambda x: x is not None,
-                                           [contact.hphone, contact.mphone, contact.wphone,
-                                            contact.secondphone]))))
-
 
     def merge_emails_like_on_home_page(self,contact):
         return "\n".join(filter(lambda x: x!=" ",
@@ -175,7 +167,4 @@ class Contacthelper:
                                 filter(lambda x: x is not None,
                                            [contact.e_mail,contact.e_mail2,contact.e_mail3]))))
 
-def clear(s):
-
-    return re.sub("[()-]", " ", s)
 
