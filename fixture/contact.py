@@ -1,4 +1,5 @@
 import re
+import time
 
 from model.contact1 import Contact1
 class Contacthelper:
@@ -69,6 +70,7 @@ class Contacthelper:
         wd.find_element_by_xpath(".//*[@id='%s']" % id).click()
         wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
         wd.switch_to_alert().accept()
+        time.sleep(2) #to wait for element present
         self.contact_cache=None
 
     def edit_first_contact(self):

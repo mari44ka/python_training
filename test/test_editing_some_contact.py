@@ -12,4 +12,4 @@ def test_edit_some_contact(app,db,check_ui):
     new_contact=db.get_contact_list()
     assert len(old_contact)==len(new_contact)
     if check_ui:
-        assert sorted(old_contact,key=Contact1.id_or_max) == sorted(new_contact,key=Contact1.id_or_max)
+        assert sorted(new_contact,key=Contact1.id_or_max) == sorted(app.contact.get_contact_list(),key=Contact1.id_or_max)
